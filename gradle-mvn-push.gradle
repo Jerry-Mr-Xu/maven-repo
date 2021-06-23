@@ -96,9 +96,7 @@ afterEvaluate { project ->
         source = android.sourceSets.main.java.srcDirs
         classpath += project.files(android.getBootClasspath().join(File.pathSeparator))
 
-        options.encoding = "UTF-8"
-        options.charSet  = "UTF-8"
-        options.addStringOption('Xdoclint:none', '-quiet')
+        failOnError = false
     }
 
     task androidJavadocsJar(type: Jar, dependsOn: androidJavadocs) {
