@@ -98,6 +98,7 @@ afterEvaluate { project ->
 
         options.encoding = "UTF-8"
         options.charSet  = "UTF-8"
+        options.addStringOption('Xdoclint:none', '-quiet')
     }
 
     task androidJavadocsJar(type: Jar, dependsOn: androidJavadocs) {
